@@ -23,7 +23,7 @@ inputs:
   title-template:
     description: "Title template where matched text from branch gets substituted in. Allowed tokens: %basebranch% | %headbranch%"
     required: false
-    default: ""
+    default: "${GITHUB_REF##*/}"
   title-update-action:
     description: "Update action to perform on the title. Allowed values: prefix | suffix | replace"
     required: false
